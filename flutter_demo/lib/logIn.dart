@@ -41,7 +41,7 @@ Widget _stackLayout(BuildContext context) {
           SizedBox(width: 7),
           Expanded(
             child: TextFormField(
-              initialValue: '请输入用户名',
+              decoration: InputDecoration(hintText: '请输入用户名'),
             ),
           )
         ]),
@@ -56,7 +56,7 @@ Widget _stackLayout(BuildContext context) {
           SizedBox(width: 7),
           Expanded(
             child: TextFormField(
-              initialValue: '请输入密码',
+              decoration: InputDecoration(hintText: '请输入密码'),
             ),
           )
         ]),

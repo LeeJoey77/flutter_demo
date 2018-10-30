@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'logIn.dart';
+import 'package:flutter_amap/flutter_amap.dart';
 
 
 
-
-void main() => runApp(MyApp());
+void main() {
+  //高德地图
+  FlutterAmap.setApiKey('e6e42c7d8108e8bb33206b67c05bc0c1');
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
