@@ -71,7 +71,7 @@ Widget _stackLayout(BuildContext context) {
     onPressed: () {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (BuildContext context) {
-        return homePage();
+        return HomePage();
       }));
     },
   );
@@ -196,7 +196,7 @@ Widget _listViewLayout(BuildContext context) {
         onPressed: () {
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (BuildContext context) {
-            return homePage();
+            return HomePage();
           }));
         },
         color: Colors.lightBlueAccent,
