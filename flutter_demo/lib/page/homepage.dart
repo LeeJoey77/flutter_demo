@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'qrcodepage.dart';
 import 'package:flutter_amap/flutter_amap.dart';
+import 'package:dio/dio.dart';
+import 'package:flutter_demo/network/url.dart';
+
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -124,8 +127,13 @@ Widget _createBottomNavigationBars() {
             backgroundColor: Colors.blue,
           )
         ],
-        onTap: (index){
+        onTap: (index) async {
           print('$index');
+          if (index == 2) {
+            Dio dio = new Dio();
+            Response<Map> response = await dio.get(Address.LogOutUrl);  
+            print(response.data);
+          }
         },
         currentIndex: 0,
         iconSize: 30,

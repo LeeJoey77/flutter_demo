@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'logIn.dart';
 import 'package:flutter_amap/flutter_amap.dart';
-
-
+import 'package:flutter_demo/page/logIn.dart';
 
 void main() {
   //高德地图
@@ -27,7 +25,9 @@ class MyApp extends StatelessWidget {
         // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: LogInPage(),
+      home: Scaffold(
+        body: LogInPage(),
+      ),
     );
   }
 }
