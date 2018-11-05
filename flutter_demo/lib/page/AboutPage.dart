@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class FindPage extends StatelessWidget {
+class AboutPage extends StatelessWidget {
   final String title;
-  FindPage({this.title, Key key}) : super(key: key);
+  AboutPage({this.title, Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

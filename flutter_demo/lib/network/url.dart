@@ -1,6 +1,9 @@
 
-
 class Address {
-  static const HostAddr = 'http://117.139.13.231:26840/';
-  static const LogOutUrl = HostAddr + 'rest/auth/logout';
+  static const String HostAddr = 'http://117.139.13.231:26840/';
+
+  //登录
+  static String getLogOutUrl() {
+    return '${HostAddr}rest/auth/logout';
+  }
 }

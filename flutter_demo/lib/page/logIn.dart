@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/widget/FDInputWidget.dart';
 import 'homepage.dart';
+import 'package:flutter_demo/widget/FDInputWidget.dart';
+import 'package:flutter_demo/util/CommonUti.dart';
+import 'package:flutter_demo/network/HttpUtil.dart';
+import 'package:flutter_demo/network/url.dart';
 
 class LogInPage extends StatefulWidget {
+  LogInPage({Key key}) : super(key: key);
   @override
   _LogInPageState createState() => _LogInPageState();
 }
@@ -57,42 +61,11 @@ Widget _pageLayout(BuildContext context) {
     height: 44,
     onPressed: () {
       if (_userName == '') {
-        showDialog(
-          context: context,
-          barrierDismissible: true,
-          builder: (context){
-            return AlertDialog(
-              title: Text('用户名不能为空'),
-              actions: <Widget>[
-                FlatButton(
-                  child: Text('确定'),
-                  onPressed: (){
-                    Navigator.of(context).pop();
-                  },
-                )
-              ],
-            );
-          }
-         );
+        CommonUtil.showAlertDialog(context, title: '用户名不能为空');
       } else if (_passWord == '') {
-        showDialog(
-          context: context,
-          barrierDismissible: true,
-          builder: (context){
-            return AlertDialog(
-              title: Text('密码不能为空'),
-              actions: <Widget>[
-                FlatButton(
-                  child: Text('确定'),
-                  onPressed: (){
-                    Navigator.of(context).pop();
-                  },
-                )
-              ],
-            );
-          }
-         );
+        CommonUtil.showAlertDialog(context, title: '密码不能为空');
       } else {
+        //  HttpManager.dataRequest(Address.getLogOutUrl(), 'GET', null);
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (BuildContext context) {
           return HomePage();
@@ -105,6 +78,7 @@ Widget _pageLayout(BuildContext context) {
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         logo,
         SizedBox(height: 120,),
