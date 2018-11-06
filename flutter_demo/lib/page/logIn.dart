@@ -60,17 +60,17 @@ Widget _pageLayout(BuildContext context) {
     minWidth: 150,
     height: 44,
     onPressed: () {
-      if (_userName == '') {
-        CommonUtil.showAlertDialog(context, title: '用户名不能为空');
-      } else if (_passWord == '') {
-        CommonUtil.showAlertDialog(context, title: '密码不能为空');
-      } else {
+      // if (_userName == '') {
+      //   CommonUtil.showAlertDialog(context, title: '用户名不能为空');
+      // } else if (_passWord == '') {
+      //   CommonUtil.showAlertDialog(context, title: '密码不能为空');
+      // } else {
         //  HttpManager.dataRequest(Address.getLogOutUrl(), 'GET', null);
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (BuildContext context) {
           return HomePage();
         }));
-      }
+      // }
     },
   );
   return Padding(

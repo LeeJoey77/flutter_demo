@@ -29,7 +29,7 @@ class _HomeContentCellState extends State<HomeContentCell> {
                       radius: 15,
                       child: ClipOval(
                             child: Image.asset(
-                              'resource/Swiss-flag.jpg',
+                              'resource/music1.jpeg',
                               fit: BoxFit.cover,
                               width: 30,
                               height: 30,
@@ -37,8 +37,8 @@ class _HomeContentCellState extends State<HomeContentCell> {
                         )
                     ),
                     SizedBox(width: 7,),
-                    Expanded(child: Text('反误了卿卿性命')),
-                    Expanded(child: Text('10:11'))
+                    Expanded(child: Text('反误了卿卿性命'), flex: 5,),
+                    Expanded(child: Text('10:11'), flex: 1,)
                   ],
                 ),
                 SizedBox(height: 10,),

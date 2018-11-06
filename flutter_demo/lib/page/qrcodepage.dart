@@ -34,6 +34,7 @@ class _MyScanState extends State<ScanBody> {
     return Scaffold(
       appBar: new AppBar(
         title: new Text('QR Code'),
+        backgroundColor: Colors.greenAccent,
       ),
       body: new Center(
         child: new Column(
